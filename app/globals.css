@@ -1,0 +1,322 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+    --primary: 142 76% 36%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 10%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 40%;
+    --accent: 142 76% 36%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 88%;
+    --input: 0 0% 88%;
+    --ring: 142 76% 36%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0 0% 6%;
+    --foreground: 0 0% 92%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 92%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 92%;
+    --primary: 142 76% 45%;
+    --primary-foreground: 0 0% 10%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 92%;
+    --muted: 0 0% 14%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 142 76% 45%;
+    --accent-foreground: 0 0% 10%;
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 142 76% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings:
+      "rlig" 1,
+      "calt" 1,
+      "ss01" 1;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+
+  p {
+    line-height: 1.75;
+  }
+
+  code {
+    font-family: var(--font-mono);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-secondary;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary/50 rounded-lg;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary;
+}
+
+/* Code block scrollbar override */
+pre::-webkit-scrollbar {
+  height: 6px; /* Horizontal scrollbar height */
+  width: 6px; /* Vertical scrollbar width */
+}
+
+pre::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+pre::-webkit-scrollbar-thumb {
+  @apply bg-muted-foreground/30 rounded-full;
+}
+
+pre::-webkit-scrollbar-thumb:hover {
+  @apply bg-muted-foreground/50;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Code blocks styling */
+pre {
+  @apply rounded-lg p-4 overflow-x-auto bg-zinc-950 text-zinc-50 border border-border;
+  font-family: var(--font-mono);
+}
+
+pre code {
+  @apply text-sm bg-transparent text-inherit;
+  font-family: var(--font-mono);
+}
+
+code {
+  @apply text-sm;
+  font-family: var(--font-mono);
+}
+
+/* Inline code */
+:not(pre) > code {
+  @apply bg-muted/60 text-foreground border border-border/60 px-2 py-0.5 rounded text-sm;
+  font-family: var(--font-mono);
+}
+
+/* Better table styling */
+table {
+  @apply w-full border-collapse;
+}
+
+th {
+  @apply bg-muted font-semibold text-left p-3 border border-border;
+}
+
+td {
+  @apply p-3 border border-border;
+}
+
+/* Headings anchor links */
+.prose h2,
+.prose h3,
+.prose h4 {
+  @apply relative;
+}
+
+/* Better list styling */
+.prose ul {
+  @apply list-disc pl-6 space-y-2;
+}
+
+.prose ol {
+  @apply list-decimal pl-6 space-y-2;
+}
+
+/* Blockquote styling */
+.prose blockquote {
+  @apply border-l-4 border-primary pl-4 italic my-6;
+}
+
+/* Link styling */
+.prose a {
+  @apply text-primary hover:underline;
+}
+
+/* Better spacing for paragraphs */
+.prose p {
+  @apply my-4;
+  line-height: 1.8;
+  letter-spacing: 0.01em;
+}
+
+/* Grid animation for homepage */
+@keyframes gridMove {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(60px, 60px);
+  }
+}
+
+/* Print Stylesheet */
+@media print {
+  /* Hide non-essential elements */
+  header,
+  nav:not(.breadcrumb),
+  footer,
+  .sidebar,
+  button,
+  .search,
+  .reading-progress,
+  .copy-button {
+    display: none !important;
+  }
+
+  /* Reset colors for printing */
+  * {
+    background: white !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* Optimize page breaks */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+
+  pre,
+  blockquote,
+  table,
+  figure {
+    page-break-inside: avoid;
+  }
+
+  p,
+  li {
+    page-break-inside: avoid;
+  }
+
+  /* Better code block printing */
+  pre {
+    border: 1px solid #ccc !important;
+    padding: 1em !important;
+    white-space: pre-wrap !important;
+    word-wrap: break-word !important;
+    background: #f5f5f5 !important;
+  }
+
+  pre code {
+    color: #333 !important;
+    font-size: 10pt !important;
+  }
+
+  /* Improve link visibility */
+  a[href]:after {
+    content: " (" attr(href) ")";
+    font-size: 90%;
+    color: #666 !important;
+  }
+
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+
+  /* Optimize font sizes */
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+
+  h1 {
+    font-size: 24pt;
+  }
+
+  h2 {
+    font-size: 18pt;
+  }
+
+  h3 {
+    font-size: 14pt;
+  }
+
+  /* Add page margins */
+  @page {
+    margin: 2cm;
+  }
+
+  /* Show breadcrumb for context */
+  .breadcrumb {
+    display: block !important;
+    margin-bottom: 1em;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid #ccc;
+  }
+
+  /* Better table printing */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  th,
+  td {
+    border: 1px solid #ccc !important;
+    padding: 8px !important;
+  }
+
+  th {
+    background: #f0f0f0 !important;
+    font-weight: bold;
+  }
+}

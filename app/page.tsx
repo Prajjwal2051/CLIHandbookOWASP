@@ -1,0 +1,176 @@
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Terminal, Book, Zap, Search } from "lucide-react";
+import { Header } from "@/components/layout/header";
+import { Footer } from "@/components/layout/footer";
+
+export default function Home() {
+  return (
+    <>
+      <Header />
+      <main className="min-h-screen">
+        {/* Hero Section */}
+        <section className="relative overflow-hidden bg-gradient-to-b from-primary/10 via-background to-background">
+          <div className="container mx-auto px-4 py-24">
+            <div className="max-w-4xl mx-auto text-center space-y-8">
+              <div className="inline-block">
+                <div className="flex items-center justify-center w-20 h-20 mx-auto mb-6 rounded-2xl bg-primary/10 backdrop-blur-sm">
+                  <Terminal className="w-10 h-10 text-primary" />
+                </div>
+              </div>
+
+              <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
+                Linux CLI
+                <span className="block text-primary">Handbook</span>
+              </h1>
+
+              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+                A comprehensive, modern guide to mastering the Linux command
+                line. From basics to advanced techniques.
+              </p>
+
+              <div className="flex flex-wrap gap-4 justify-center">
+                <Link href="/introduction/overview">
+                  <Button size="lg" className="text-lg">
+                    Get Started
+                  </Button>
+                </Link>
+                <Link href="/reference/command-index">
+                  <Button size="lg" variant="outline" className="text-lg">
+                    Browse Commands
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-24 relative overflow-hidden">
+          {/* Animated Grid Background */}
+          <div className="absolute inset-0 -z-10">
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-primary/5" />
+            <div
+              className="absolute inset-0 opacity-20"
+              style={{
+                backgroundImage: `
+                  linear-gradient(to right, hsl(var(--border)) 1px, transparent 1px),
+                  linear-gradient(to bottom, hsl(var(--border)) 1px, transparent 1px)
+                `,
+                backgroundSize: "60px 60px",
+                animation: "gridMove 20s linear infinite",
+              }}
+            />
+          </div>
+
+          <div className="container mx-auto px-4">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <Card className="border-2 hover:border-primary transition-colors backdrop-blur-sm bg-background/80">
+                <CardHeader>
+                  <Book className="w-10 h-10 text-primary mb-2" />
+                  <CardTitle>Comprehensive</CardTitle>
+                  <CardDescription>
+                    40+ commands with detailed examples and best practices
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+
+              <Card className="border-2 hover:border-primary transition-colors backdrop-blur-sm bg-background/80">
+                <CardHeader>
+                  <Search className="w-10 h-10 text-primary mb-2" />
+                  <CardTitle>Searchable</CardTitle>
+                  <CardDescription>
+                    Quickly find any command or concept you need
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+
+              <Card className="border-2 hover:border-primary transition-colors backdrop-blur-sm bg-background/80">
+                <CardHeader>
+                  <Terminal className="w-10 h-10 text-primary mb-2" />
+                  <CardTitle>Interactive</CardTitle>
+                  <CardDescription>
+                    Copy code examples with a single click
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Quick Links Section */}
+        <section className="py-24 bg-secondary/30">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center mb-12">
+              Explore Topics
+            </h2>
+
+            <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              <Link href="/introduction/getting-started">
+                <Card className="h-full hover:shadow-lg transition-shadow cursor-pointer">
+                  <CardHeader>
+                    <CardTitle>Introduction</CardTitle>
+                    <CardDescription>
+                      Start your CLI journey with the basics
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-2 text-sm text-muted-foreground">
+                      <li>• Overview</li>
+                      <li>• Prerequisites</li>
+                      <li>• Getting Started</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </Link>
+
+              <Link href="/commands/navigation">
+                <Card className="h-full hover:shadow-lg transition-shadow cursor-pointer">
+                  <CardHeader>
+                    <CardTitle>Commands</CardTitle>
+                    <CardDescription>
+                      Essential commands for daily use
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-2 text-sm text-muted-foreground">
+                      <li>• Navigation</li>
+                      <li>• File Operations</li>
+                      <li>• Text Processing</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </Link>
+
+              <Link href="/advanced/file-permissions-deep-dive">
+                <Card className="h-full hover:shadow-lg transition-shadow cursor-pointer">
+                  <CardHeader>
+                    <CardTitle>Advanced</CardTitle>
+                    <CardDescription>
+                      Deep dive into complex topics
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-2 text-sm text-muted-foreground">
+                      <li>• Permissions</li>
+                      <li>• Root & Sudo</li>
+                      <li>• Shortcuts</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </Link>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
+  );
+}
