@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className="min-h-screen">
+      <main className="h-[calc(100vh-3.5rem)] overflow-y-auto" suppressHydrationWarning>
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-b from-primary/10 via-background to-background">
           <div className="container mx-auto px-4 py-24">
@@ -169,8 +169,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <Footer />
       </main>
-      <Footer />
     </>
   );
 }
