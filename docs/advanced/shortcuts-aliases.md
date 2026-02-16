@@ -1,3 +1,7 @@
+---
+title: "Shortcuts & Aliases"
+---
+
 Boost your command-line productivity with keyboard shortcuts and custom aliases.
 
 ## Essential Keyboard Shortcuts

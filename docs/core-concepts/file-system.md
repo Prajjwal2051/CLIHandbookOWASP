@@ -1,3 +1,7 @@
+---
+title: "File System"
+---
+
 Imagine your computer's storage as a giant tree. But wait - this tree is upside down!
 
 ## The Root (`/`)

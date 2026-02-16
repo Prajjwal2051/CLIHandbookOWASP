@@ -1,3 +1,6 @@
+---
+title: "Flag Reference"
+---
 
 Quick reference of commonly used flags across different commands.
 

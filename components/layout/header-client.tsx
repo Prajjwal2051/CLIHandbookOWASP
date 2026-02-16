@@ -45,7 +45,10 @@ export function Header({ allDocs }: HeaderProps) {
         onOpenChange={setSearchOpen}
         allDocs={allDocs}
       />
-      <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60" suppressHydrationWarning>
+      <header
+        className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
+        suppressHydrationWarning
+      >
         <div className="container flex h-14 max-w-screen-2xl items-center">
           <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
             <SheetTrigger asChild>
@@ -88,7 +91,8 @@ export function Header({ allDocs }: HeaderProps) {
                             <ChevronRight
                               className={cn(
                                 "h-3.5 w-3.5 transition-transform",
-                                openSections.includes(section.title) && "rotate-90",
+                                openSections.includes(section.title) &&
+                                  "rotate-90",
                               )}
                             />
                           </button>
@@ -202,11 +206,11 @@ export function Header({ allDocs }: HeaderProps) {
                 className="ml-2 hover:opacity-80 transition-opacity"
               >
                 <Image
-                  src="/owasp-logo.svg"
-                  alt="OWASP Logo"
+                  src="/owasp-nie-logo.jpg"
+                  alt="OWASP NIE Student Chapter Logo"
                   width={32}
                   height={32}
-                  className="w-8 h-8"
+                  className="w-8 h-8 rounded-full"
                   suppressHydrationWarning
                 />
               </Link>

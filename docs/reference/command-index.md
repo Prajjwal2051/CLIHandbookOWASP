@@ -1,3 +1,7 @@
+---
+title: "Command Index"
+---
+
 Alphabetical index of all Linux CLI commands covered in this handbook.
 
 ## A-C

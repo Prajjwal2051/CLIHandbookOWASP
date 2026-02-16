@@ -1,3 +1,7 @@
+---
+title: "File Operations"
+---
+
 Creating, moving, and deleting files are the bread and butter of the command line.
 
 ## Create

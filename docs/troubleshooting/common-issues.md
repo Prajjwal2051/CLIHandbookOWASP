@@ -1,3 +1,7 @@
+---
+title: "Common Issues"
+---
+
 # Common Issues and Troubleshooting
 
 Solutions to frequently encountered problems when using the Linux command line.

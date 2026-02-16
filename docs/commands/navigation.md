@@ -1,3 +1,7 @@
+---
+title: "Navigation"
+---
+
 # Basics of Navigation
 
 Deep diving into the Linux file system can feel like exploring a maze. These three commands are your map and compass.

@@ -1,3 +1,7 @@
+---
+title: "Getting Started"
+---
+
 Ready to type your first commands? This guide will help you open your terminal and start exploring!
 
 ## Opening Your Terminal

@@ -1,3 +1,7 @@
+---
+title: "Root User & Sudo"
+---
+
 Understanding the root user, superuser privileges, and safe administration practices.
 
 ## What is Root?

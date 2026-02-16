@@ -1,3 +1,7 @@
+---
+title: "Special Operators"
+---
+
 Special operators are powerful symbols that modify how commands behave and interact with each other. Mastering these operators will significantly enhance your command-line productivity.
 
 ## Wildcard (`*`)

@@ -1,3 +1,7 @@
+---
+title: "Shell"
+---
+
 ## What is a Shell?
 
 A shell is a command-line interpreter (CLI) that reads your commands and interprets them to tell the operating system what to do. It acts as an interface between you and the operating system kernel.
@@ -37,6 +41,7 @@ You type a command in the terminal:
 ```bash
 $ ls -la
 ```
+
 ---
 
 ### STEP 2: Shell Parsing
@@ -48,8 +53,6 @@ Shell reads and interprets your input:
 - **Checks syntax** for errors
 - **Expands** variables and wildcards
 
-
-
 ---
 
 ### STEP 3: Instruction Preparation
@@ -60,8 +63,6 @@ Shell prepares system calls:
 - **Specifies** output format (long, show all)
 - **Sets up** environment variables
 
-
-
 ---
 
 ### STEP 4: Kernel Execution
@@ -71,8 +72,6 @@ Operating system kernel performs the operation:
 - **Accesses** file system
 - **Retrieves** directory contents
 - **Gathers** file metadata (permissions, size, etc.)
-
-
 
 ---
 

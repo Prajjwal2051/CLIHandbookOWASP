@@ -1,3 +1,7 @@
+---
+title: "Prerequisites"
+---
+
 Before diving into the Linux command line, ensure you have the necessary setup and basic understanding.
 
 ## System Requirements

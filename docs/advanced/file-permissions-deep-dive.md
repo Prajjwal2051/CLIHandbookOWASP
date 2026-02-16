@@ -1,3 +1,7 @@
+---
+title: "File Permissions"
+---
+
 Linux is built for multiple users. To keep things safe, every file has a set of rules about who can do what.
 
 ## The Three Actions

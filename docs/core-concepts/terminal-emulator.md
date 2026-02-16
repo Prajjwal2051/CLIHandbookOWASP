@@ -1,3 +1,7 @@
+---
+title: "Terminal Emulator"
+---
+
 You've opened the window, seen the black screen, and typed a few commands. But what _exactly_ is this "Terminal"?
 
 ## It's Just a Window
