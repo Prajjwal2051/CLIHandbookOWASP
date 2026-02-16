@@ -7,6 +7,7 @@ Thank you for considering contributing to the Linux CLI Handbook! We welcome con
 ### Reporting Bugs
 
 If you find a bug, please create an issue with:
+
 - A clear title and description
 - Steps to reproduce the issue
 - Expected vs actual behavior
@@ -16,6 +17,7 @@ If you find a bug, please create an issue with:
 ### Suggesting Enhancements
 
 We love new ideas! Please create an issue with:
+
 - A clear title and description
 - Why this enhancement would be useful
 - Any examples or mockups
@@ -72,6 +74,7 @@ To add or improve documentation:
 ### Commit Messages
 
 Use clear, descriptive commit messages:
+
 - `feat: Add search history feature`
 - `fix: Resolve sidebar scroll issue`
 - `docs: Update installation instructions`
@@ -89,6 +92,7 @@ Use clear, descriptive commit messages:
 ## Questions?
 
 Feel free to reach out:
+
 - Open an issue for discussion
 - Contact OWASP NIE Student Chapter via [social media links]
 

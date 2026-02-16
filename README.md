@@ -122,6 +122,7 @@ npm run build
 ### Other Platforms
 
 Compatible with:
+
 - AWS Amplify
 - Digital Ocean App Platform
 - Cloudflare Pages
@@ -163,12 +164,14 @@ npx shadcn-ui@latest add [component-name]
 ## 📊 Key Features Explained
 
 ### Advanced Search
+
 - Multi-term matching with relevance scoring
 - Fuzzy matching for typo tolerance
 - Recent searches with localStorage persistence
 - Keyboard navigation (↑↓ arrows, Enter, Esc)
 
 ### Reading Experience
+
 - Fixed header and sidebar navigation
 - Scrollable content area with reading progress
 - Auto-highlighting table of contents
