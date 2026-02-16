@@ -48,7 +48,7 @@ export default async function DocPage({ params }: { params: Promise<{ slug: stri
     <>
       <ReadingProgress />
       <Header />
-      <div className="flex h-[calc(100vh-3.5rem)]">
+      <div className="flex h-[calc(100vh-3.5rem-6rem)]">
         <Sidebar />
         <main className="flex-1 min-w-0 overflow-y-auto">
           <div className="container max-w-7xl py-8 px-4 md:px-8">
@@ -61,9 +61,9 @@ export default async function DocPage({ params }: { params: Promise<{ slug: stri
               allDocs={allDocs}
             />
           </div>
-          <Footer />
         </main>
       </div>
+      <Footer />
     </>
   );
 }
