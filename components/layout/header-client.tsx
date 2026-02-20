@@ -200,7 +200,7 @@ export function Header({ allDocs }: HeaderProps) {
               </Button>
 
               <Link
-                href="https://owasp.org"
+                href="https://owaspwebsite.netlify.app/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="ml-2 hover:opacity-80 transition-opacity"
