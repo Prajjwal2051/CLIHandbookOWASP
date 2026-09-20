@@ -11,7 +11,7 @@ export function Footer() {
         <div className="text-center text-sm leading-loose text-muted-foreground md:text-left">
           Built by{" "}
           <Link
-            href="https://owaspwebsite.netlify.app"
+            href="https://owasp-website.onrender.com"
             target="_blank"
             rel="noreferrer"
             className="font-medium underline underline-offset-4"
